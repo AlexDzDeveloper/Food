@@ -868,7 +868,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function timer(id) {
-  var deadline = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '2025-09-20';
+  var deadline = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '2025-09-30';
   //Timer
   //ЗАПУСКАЄМО ТАЙМЕР ЗВОРОТНЬОГО ВІДЛІКУ
 
