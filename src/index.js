@@ -43,9 +43,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 });
 
-const myModule = require('./js/main');
+// const myModule = require('./js/main');
 
-const myModuleInstance = new myModule();
+// const myModuleInstance = new myModule();
 
-myModuleInstance.hello();
-myModuleInstance.goodbye();
+// myModuleInstance.hello();
+// myModuleInstance.goodbye();

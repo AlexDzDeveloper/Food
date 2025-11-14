@@ -1,26 +1,6 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/main.js":
-/*!************************!*\
-  !*** ./src/js/main.js ***!
-  \************************/
-/***/ (function(module) {
-
-//використовую систему модулів з використанням синтаксиса CommonJS
-
-function myModule() {
-  this.hello = function () {
-    // console.log('Hello');
-  };
-  this.goodbye = function () {
-    // console.log('bye!');
-  };
-}
-module.exports = myModule;
-
-/***/ }),
-
 /***/ "./src/js/modules/calc.js":
 /*!********************************!*\
   !*** ./src/js/modules/calc.js ***!
@@ -255,7 +235,7 @@ function cards() {
         }
 
         //динамічно формуємо структуру за допомогою innerHTML
-        element.innerHTML = "\n\t\t\t\t<img src=".concat(this.src, " alt=\"").concat(this.alt, "\">\n\t\t\t\t<h3 class=\"menu__item-subtitle\">").concat(this.title, "</h3>\n\t\t\t\t<div class=\"menu__item-descr\">").concat(this.descr, "</div>\n\t\t\t\t<div class=\"menu__item-divider\"></div>\n\t\t\t\t<div class=\"menu__item-price\">\n\t\t\t\t\t<div class=\"menu__item-cost\">\u0426\u0435\u043D\u0430:</div>\n\t\t\t\t\t<div class=\"menu__item-total\"><span>").concat(this.price, "</span> \u0433\u0440\u043D/\u0434\u0435\u043D\u044C</div>\n\t\t\t\t</div>\n\t\t\t");
+        element.innerHTML = "\n\t\t\t\t<img src=".concat(this.src, " alt=\"").concat(this.alt, "\">\n\t\t\t\t<h3 class=\"menu__item-subtitle\">").concat(this.title, "</h3>\n\t\t\t\t<div class=\"menu__item-descr\">").concat(this.descr, "</div>\n\t\t\t\t<div class=\"menu__item-divider\"></div>\n\t\t\t\t<div class=\"menu__item-price\">\n\t\t\t\t\t<div class=\"menu__item-cost\">\u0426\u0456\u043D\u0430:</div>\n\t\t\t\t\t<div class=\"menu__item-total\"><span>").concat(this.price, "</span> \u0433\u0440\u043D/\u0434\u0435\u043D\u044C</div>\n\t\t\t\t</div>\n\t\t\t");
 
         //використовуємо батьківський елемент DOM, поміщаємо в нього наш блок
         this.parent.append(element);
@@ -302,9 +282,9 @@ function cards() {
   	function createCard(data) {
   		data.forEach(({img, altimg, title, descr, price}) => {
   			const element = document.createElement('div');
-  
+
   			element.classList.add('menu__item');
-  
+
   			element.innerHTML = `
   				<img src=${img} alt="${altimg}">
   				<h3 class="menu__item-subtitle">${title}</h3>
@@ -315,7 +295,7 @@ function cards() {
   					<div class="menu__item-total"><span>${price * 37}</span> грн/день</div>
   				</div>
   			`;
-  
+
   			document.querySelector('.menu .container').append(element);
   		})
   	} */
@@ -536,7 +516,7 @@ function openModal(modalSelector, modalTimerId) {
 
   //якщо користувач сам відкрив модальне вікно, то вимикаємо автоматичне відкривання модального вікна за допомогою setTimeout
   //робимо перевірку на існування modalTimerId, а потім запускаємо ф-цію
-  console.log(modalTimerId);
+  // console.log(modalTimerId);
   if (modalTimerId) {
     clearInterval(modalTimerId);
   }
@@ -868,7 +848,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function timer(id) {
-  var deadline = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '2025-09-30';
+  var deadline = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '2026-01-11';
   //Timer
   //ЗАПУСКАЄМО ТАЙМЕР ЗВОРОТНЬОГО ВІДЛІКУ
 
@@ -2162,9 +2142,9 @@ var Promise$1 = function () {
   /**
     `finally` will be invoked regardless of the promise's fate just as native
     try/catch/finally behaves
-  
+
     Synchronous example:
-  
+
     ```js
     findAuthor() {
       if (Math.random() > 0.5) {
@@ -2172,7 +2152,7 @@ var Promise$1 = function () {
       }
       return new Author();
     }
-  
+
     try {
       return findAuthor(); // succeed or fail
     } catch(error) {
@@ -2182,9 +2162,9 @@ var Promise$1 = function () {
       // doesn't affect the return value
     }
     ```
-  
+
     Asynchronous example:
-  
+
     ```js
     findAuthor().catch(function(reason){
       return findOtherAuther();
@@ -2192,7 +2172,7 @@ var Promise$1 = function () {
       // author was either found, or not
     });
     ```
-  
+
     @method finally
     @param {Function} callback
     @return {Promise}
@@ -8962,7 +8942,7 @@ handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -8976,14 +8956,14 @@ handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	!function() {
@@ -8996,7 +8976,7 @@ handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 /******/ 			return getter;
 /******/ 		};
 /******/ 	}();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
@@ -9008,7 +8988,7 @@ handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 /******/ 			}
 /******/ 		};
 /******/ 	}();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/global */
 /******/ 	!function() {
 /******/ 		__webpack_require__.g = (function() {
@@ -9020,12 +9000,12 @@ handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 /******/ 			}
 /******/ 		})();
 /******/ 	}();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	!function() {
 /******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
 /******/ 	}();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	!function() {
 /******/ 		// define __esModule on exports
@@ -9036,7 +9016,7 @@ handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	}();
-/******/ 	
+/******/
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
@@ -9088,7 +9068,7 @@ window.addEventListener('DOMContentLoaded', function () {
   (0,_js_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])('form', modalTimerId);
   (0,_js_modules_modal__WEBPACK_IMPORTED_MODULE_4__["default"])('[data-modal]', '.modal', modalTimerId);
   (0,_js_modules_tabs__WEBPACK_IMPORTED_MODULE_6__["default"])('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
-  (0,_js_modules_timer__WEBPACK_IMPORTED_MODULE_7__["default"])('.timer', '2025-09-20');
+  (0,_js_modules_timer__WEBPACK_IMPORTED_MODULE_7__["default"])('.timer', '2026-01-11');
   (0,_js_modules_slider__WEBPACK_IMPORTED_MODULE_5__["default"])({
     //порушуємо порядок передання аргументів для впевненості в деструктуризації
     container: '.offer__slider',
@@ -9101,10 +9081,13 @@ window.addEventListener('DOMContentLoaded', function () {
     field: '.offer__slider-inner'
   });
 });
-var myModule = __webpack_require__(/*! ./js/main */ "./src/js/main.js");
-var myModuleInstance = new myModule();
-myModuleInstance.hello();
-myModuleInstance.goodbye();
+
+// const myModule = require('./js/main');
+
+// const myModuleInstance = new myModule();
+
+// myModuleInstance.hello();
+// myModuleInstance.goodbye();
 }();
 /******/ })()
 ;

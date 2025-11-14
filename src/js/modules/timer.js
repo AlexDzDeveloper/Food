@@ -1,4 +1,4 @@
-function timer(id, deadline = '2027-01-11') {
+function timer(id, deadline = '2026-01-11') {
 	//Timer
 	//ЗАПУСКАЄМО ТАЙМЕР ЗВОРОТНЬОГО ВІДЛІКУ
 

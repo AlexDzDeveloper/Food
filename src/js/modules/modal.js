@@ -6,7 +6,7 @@ function openModal(modalSelector, modalTimerId) {
 
 	//якщо користувач сам відкрив модальне вікно, то вимикаємо автоматичне відкривання модального вікна за допомогою setTimeout
 	//робимо перевірку на існування modalTimerId, а потім запускаємо ф-цію
-	console.log(modalTimerId);
+	// console.log(modalTimerId);
 	if(modalTimerId) {
 		clearInterval(modalTimerId);
 	};
