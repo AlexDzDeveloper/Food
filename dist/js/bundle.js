@@ -282,9 +282,9 @@ function cards() {
   	function createCard(data) {
   		data.forEach(({img, altimg, title, descr, price}) => {
   			const element = document.createElement('div');
-
+  
   			element.classList.add('menu__item');
-
+  
   			element.innerHTML = `
   				<img src=${img} alt="${altimg}">
   				<h3 class="menu__item-subtitle">${title}</h3>
@@ -295,7 +295,7 @@ function cards() {
   					<div class="menu__item-total"><span>${price * 37}</span> грн/день</div>
   				</div>
   			`;
-
+  
   			document.querySelector('.menu .container').append(element);
   		})
   	} */
@@ -2142,9 +2142,9 @@ var Promise$1 = function () {
   /**
     `finally` will be invoked regardless of the promise's fate just as native
     try/catch/finally behaves
-
+  
     Synchronous example:
-
+  
     ```js
     findAuthor() {
       if (Math.random() > 0.5) {
@@ -2152,7 +2152,7 @@ var Promise$1 = function () {
       }
       return new Author();
     }
-
+  
     try {
       return findAuthor(); // succeed or fail
     } catch(error) {
@@ -2162,9 +2162,9 @@ var Promise$1 = function () {
       // doesn't affect the return value
     }
     ```
-
+  
     Asynchronous example:
-
+  
     ```js
     findAuthor().catch(function(reason){
       return findOtherAuther();
@@ -2172,7 +2172,7 @@ var Promise$1 = function () {
       // author was either found, or not
     });
     ```
-
+  
     @method finally
     @param {Function} callback
     @return {Promise}
@@ -8942,7 +8942,7 @@ handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/
+/******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -8956,14 +8956,14 @@ handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/
+/******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
+/******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	!function() {
@@ -8976,7 +8976,7 @@ handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 /******/ 			return getter;
 /******/ 		};
 /******/ 	}();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
@@ -8988,7 +8988,7 @@ handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 /******/ 			}
 /******/ 		};
 /******/ 	}();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	!function() {
 /******/ 		__webpack_require__.g = (function() {
@@ -9000,12 +9000,12 @@ handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 /******/ 			}
 /******/ 		})();
 /******/ 	}();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	!function() {
 /******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
 /******/ 	}();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	!function() {
 /******/ 		// define __esModule on exports
@@ -9016,7 +9016,7 @@ handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	}();
-/******/
+/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
@@ -9068,7 +9068,7 @@ window.addEventListener('DOMContentLoaded', function () {
   (0,_js_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])('form', modalTimerId);
   (0,_js_modules_modal__WEBPACK_IMPORTED_MODULE_4__["default"])('[data-modal]', '.modal', modalTimerId);
   (0,_js_modules_tabs__WEBPACK_IMPORTED_MODULE_6__["default"])('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
-  (0,_js_modules_timer__WEBPACK_IMPORTED_MODULE_7__["default"])('.timer', '2026-01-11');
+  (0,_js_modules_timer__WEBPACK_IMPORTED_MODULE_7__["default"])('.timer', '2027-01-11');
   (0,_js_modules_slider__WEBPACK_IMPORTED_MODULE_5__["default"])({
     //порушуємо порядок передання аргументів для впевненості в деструктуризації
     container: '.offer__slider',
