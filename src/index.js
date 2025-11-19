@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	forms('form', modalTimerId);
 	modal('[data-modal]', '.modal', modalTimerId);
 	tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
-	timer('.timer', '2027-01-11');
+	timer('.timer', '2026-01-13');
 	slider({//порушуємо порядок передання аргументів для впевненості в деструктуризаціїї
 		container: '.offer__slider',
 		nextArrow: '.offer__slider-next',

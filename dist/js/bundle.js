@@ -9068,9 +9068,9 @@ window.addEventListener('DOMContentLoaded', function () {
   (0,_js_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])('form', modalTimerId);
   (0,_js_modules_modal__WEBPACK_IMPORTED_MODULE_4__["default"])('[data-modal]', '.modal', modalTimerId);
   (0,_js_modules_tabs__WEBPACK_IMPORTED_MODULE_6__["default"])('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
-  (0,_js_modules_timer__WEBPACK_IMPORTED_MODULE_7__["default"])('.timer', '2027-01-11');
+  (0,_js_modules_timer__WEBPACK_IMPORTED_MODULE_7__["default"])('.timer', '2026-01-13');
   (0,_js_modules_slider__WEBPACK_IMPORTED_MODULE_5__["default"])({
-    //порушуємо порядок передання аргументів для впевненості в деструктуризації
+    //порушуємо порядок передання аргументів для впевненості в деструктуризаціїї
     container: '.offer__slider',
     nextArrow: '.offer__slider-next',
     prevArrow: '.offer__slider-prev',

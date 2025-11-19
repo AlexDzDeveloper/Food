@@ -1,0 +1,13 @@
+@media (max-width: 1400px) {
+	.container {
+		max-width: 1050px;
+	}
+
+	.sidepanel {
+		left: 30px;
+	}
+}
+
+@media (max-width: 1200px) {
+
+}
