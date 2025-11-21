@@ -47,4 +47,44 @@
 		}
 	}
 
+	.preview {
+		padding: 20px 0 80px 0;
+
+		.bgc_blue {
+			height: 745px;
+		}
+
+		.tabcontainer {
+			width: 900px;
+			// padding: 0 30px;
+
+			.tabcontent {
+				&__descr {
+					font-size: 18px;
+					width: 480px;
+					height: 270px;
+					line-height: 32px;
+				}
+			}
+
+			.tabheader {
+				padding: 30px 20px;
+				width: 200px;
+
+				&__item {
+					margin-top: 8px;
+					font-size: 15px;
+
+					&_active {
+						font-weight: 600;
+					}
+				}
+			}
+		}
+
+		&__life {
+			font-size: 19px;
+			font-weight: 600;
+		}
+	}
 }
