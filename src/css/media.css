@@ -136,4 +136,27 @@
     font-size: 36px;
     font-weight: 600;
   }
+  .menu .title {
+    font-size: 30px;
+  }
+  .menu__item {
+    width: 250px;
+    min-height: 435px;
+  }
+  .menu__item-subtitle {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+  .menu__item-descr {
+    margin-top: 15px;
+    font-size: 15px;
+  }
+  .menu__item-divider {
+    margin-top: 25px;
+  }
+  .menu__item-total span {
+    font-size: 22px;
+    font-weight: 600;
+  }
 }/*# sourceMappingURL=media.css.map */

@@ -181,4 +181,37 @@
 			}
 		}
 	}
+
+	.menu {
+		.title {
+			font-size: 30px;
+		}
+
+		&__item {
+			width: 250px;
+			min-height: 435px;
+
+			&-subtitle {
+				font-size: 17px;
+				font-weight: 600;
+				margin-top: 15px;
+			}
+
+			&-descr {
+				margin-top: 15px;
+				font-size: 15px;
+			}
+
+			&-divider {
+				margin-top: 25px;
+			}
+
+			&-total {
+				span {
+					font-size: 22px;
+					font-weight: 600;
+				}
+			}
+		}
+	}
 }
