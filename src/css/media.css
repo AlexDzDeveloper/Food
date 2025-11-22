@@ -71,6 +71,7 @@
   }
   .offer .bgc_y {
     height: 714px;
+    width: 992px;
   }
   .offer__text .title {
     font-size: 30px;
@@ -102,5 +103,37 @@
   }
   .offer__slider-wrapper {
     margin-top: 10px;
+  }
+  .calculating .title {
+    font-size: 30px;
+  }
+  .calculating__subtitle {
+    font-size: 17px;
+  }
+  .calculating__choose {
+    margin-top: 22px;
+  }
+  .calculating__choose-item {
+    width: 160px;
+    height: 45px;
+  }
+  .calculating__choose_medium {
+    width: 580px;
+  }
+  .calculating__choose_big {
+    width: 750px;
+  }
+  .calculating__choose_big .calculating__choose-item {
+    width: 165px;
+  }
+  .calculating__divider {
+    margin: 30px auto;
+  }
+  .calculating__total {
+    width: 400px;
+  }
+  .calculating__result span {
+    font-size: 36px;
+    font-weight: 600;
   }
 }/*# sourceMappingURL=media.css.map */

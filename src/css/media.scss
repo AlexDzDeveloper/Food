@@ -54,7 +54,6 @@
 
 		.tabcontainer {
 			width: 900px;
-			// padding: 0 30px;
 
 			.tabcontent {
 				&__descr {
@@ -91,6 +90,7 @@
 
 		.bgc_y {
 			height: 714px;
+			width: 992px;
 		}
 
 		&__text {
@@ -132,6 +132,52 @@
 
 			&-wrapper {
 				margin-top: 10px;
+			}
+		}
+	}
+
+	.calculating {
+		.title {
+			font-size: 30px;
+		}
+
+		&__subtitle {
+			font-size: 17px;
+		}
+
+		&__choose {
+			margin-top: 22px;
+
+			&-item {
+				width: 160px;
+				height: 45px;
+			}
+
+			&_medium {
+				width: 580px;
+			}
+
+			&_big {
+				width: 750px;
+
+				.calculating__choose-item {
+					width: 165px;
+				}
+			}
+		}
+
+		&__divider {
+			margin: 30px auto;
+		}
+
+		&__total {
+			width: 400px;
+		}
+
+		&__result {
+			span {
+				font-size: 36px;
+				font-weight: 600;
 			}
 		}
 	}
