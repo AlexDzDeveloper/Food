@@ -228,4 +228,34 @@
 			width: 180px;
 		}
 	}
+
+	.promotion {
+		padding: 60px 0 160px 0;
+
+		&__descr {
+			margin-top: 30px;
+			font-size: 16px;
+
+			span {
+				font-size: 22px;
+			}
+		}
+
+		&__timer {
+			.timer {
+				margin-top: 50px;
+				padding-left: 45px;
+
+				&__block {
+					width: 80px;
+					height: 100px;
+
+					span {
+						margin-top: 15px;
+						font-size: 45px;
+					}
+				}
+			}
+		}
+	}
 }

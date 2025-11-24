@@ -170,4 +170,26 @@
     font-size: 15px;
     width: 180px;
   }
+  .promotion {
+    padding: 60px 0 160px 0;
+  }
+  .promotion__descr {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+  .promotion__descr span {
+    font-size: 22px;
+  }
+  .promotion__timer .timer {
+    margin-top: 50px;
+    padding-left: 45px;
+  }
+  .promotion__timer .timer__block {
+    width: 80px;
+    height: 100px;
+  }
+  .promotion__timer .timer__block span {
+    margin-top: 15px;
+    font-size: 45px;
+  }
 }/*# sourceMappingURL=media.css.map */
