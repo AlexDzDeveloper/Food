@@ -19,6 +19,10 @@
 		font-size: 16px;
 	}
 
+	.title {
+		font-size: 30px;
+	}
+
 	.header {
 		padding: 0 50px;
 
@@ -137,10 +141,6 @@
 	}
 
 	.calculating {
-		.title {
-			font-size: 30px;
-		}
-
 		&__subtitle {
 			font-size: 17px;
 		}
@@ -183,10 +183,6 @@
 	}
 
 	.menu {
-		.title {
-			font-size: 30px;
-		}
-
 		&__item {
 			width: 250px;
 			min-height: 435px;
@@ -212,6 +208,24 @@
 					font-weight: 600;
 				}
 			}
+		}
+	}
+
+	.order {
+		padding-bottom: 70px;
+
+		&__form {
+			margin-top: 50px;
+		}
+
+		&__input {
+			width: 188px;
+			font-size: 15px;
+		}
+
+		button {
+			font-size: 15px;
+			width: 180px;
 		}
 	}
 }

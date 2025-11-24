@@ -15,6 +15,9 @@
     height: 50px;
     font-size: 16px;
   }
+  .title {
+    font-size: 30px;
+  }
   .header {
     padding: 0 50px;
   }
@@ -104,9 +107,6 @@
   .offer__slider-wrapper {
     margin-top: 10px;
   }
-  .calculating .title {
-    font-size: 30px;
-  }
   .calculating__subtitle {
     font-size: 17px;
   }
@@ -136,9 +136,6 @@
     font-size: 36px;
     font-weight: 600;
   }
-  .menu .title {
-    font-size: 30px;
-  }
   .menu__item {
     width: 250px;
     min-height: 435px;
@@ -158,5 +155,19 @@
   .menu__item-total span {
     font-size: 22px;
     font-weight: 600;
+  }
+  .order {
+    padding-bottom: 70px;
+  }
+  .order__form {
+    margin-top: 50px;
+  }
+  .order__input {
+    width: 188px;
+    font-size: 15px;
+  }
+  .order button {
+    font-size: 15px;
+    width: 180px;
   }
 }/*# sourceMappingURL=media.css.map */
