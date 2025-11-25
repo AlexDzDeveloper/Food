@@ -171,7 +171,7 @@
     width: 180px;
   }
   .promotion {
-    padding: 60px 0 160px 0;
+    padding: 60px 0 130px 0;
   }
   .promotion__descr {
     margin-top: 30px;
@@ -191,5 +191,16 @@
   .promotion__timer .timer__block span {
     margin-top: 15px;
     font-size: 45px;
+  }
+  .modal__content {
+    padding: 30px;
+    width: 90%;
+  }
+  .modal__title {
+    font-size: 20px;
+    width: 380px;
+  }
+  .modal__input {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=media.css.map */
