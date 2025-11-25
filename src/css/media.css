@@ -203,4 +203,24 @@
   .modal__input {
     font-size: 16px;
   }
+}
+@media (max-width: 991px) {
+  .container {
+    width: 768px;
+  }
+  .btn {
+    width: 160px;
+    font-size: 14px;
+  }
+  .header {
+    padding: 0 35px;
+    height: 110px;
+    margin-top: 10px;
+  }
+  .header__left-block {
+    min-width: 400px;
+  }
+  .header__logo {
+    max-width: 110px;
+  }
 }/*# sourceMappingURL=media.css.map */
