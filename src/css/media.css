@@ -223,4 +223,34 @@
   .header__logo {
     max-width: 110px;
   }
+  .preview {
+    padding: 20px 0 73px 0;
+  }
+  .preview .bgc_blue {
+    height: 630px;
+  }
+  .preview__life {
+    font-size: 17px;
+    margin-left: 60px;
+  }
+  .preview .tabcontainer {
+    width: 650px;
+  }
+  .preview .tabcontainer .tabheader h3 {
+    font-size: 15px;
+  }
+  .preview .tabcontainer .tabheader__items {
+    padding-left: 16px;
+    margin-top: 30px;
+  }
+  .preview .tabcontainer .tabheader__item {
+    font-size: 13px;
+  }
+  .preview .tabcontainer .tabcontent__descr {
+    font-size: 15px;
+    line-height: 24px;
+    width: 410px;
+    height: 155px;
+    padding: 20px 25px;
+  }
 }/*# sourceMappingURL=media.css.map */
