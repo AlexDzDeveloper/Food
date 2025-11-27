@@ -308,6 +308,46 @@
   .offer__slide {
     height: 280px;
   }
+  .calculating {
+    padding: 30px 0;
+  }
+  .calculating__field {
+    margin-top: 25px;
+    padding: 25px 0 25px 0;
+  }
+  .calculating__subtitle {
+    font-size: 16px;
+  }
+  .calculating__choose {
+    margin-top: 20px;
+  }
+  .calculating__choose-item {
+    width: 140px;
+    height: 38px;
+  }
+  .calculating__choose_medium {
+    width: 444px;
+  }
+  .calculating__choose_big {
+    width: 600px;
+  }
+  .calculating__choose_big .calculating__choose-item {
+    width: 140px;
+  }
+  .calculating__divider {
+    margin: 25px auto;
+    width: 444px;
+  }
+  .calculating__total {
+    width: 370px;
+  }
+  .calculating__result {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .calculating__result span {
+    font-weight: 400;
+  }
   .sidepanel {
     left: 12px;
   }

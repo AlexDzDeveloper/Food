@@ -413,7 +413,55 @@
 	}
 
 	.calculating {
+		padding: 30px 0;
 
+		&__field {
+			margin-top: 25px;
+			padding: 25px 0 25px 0;
+		}
+
+		&__subtitle {
+			font-size: 16px;
+		}
+
+		&__choose {
+			margin-top: 20px;
+
+			&-item {
+				width: 140px;
+				height: 38px;
+			}
+
+			&_medium {
+				width: 444px;
+			}
+
+			&_big {
+				width: 600px;
+
+				.calculating__choose-item {
+					width: 140px;
+				}
+			}
+		}
+
+		&__divider {
+			margin: 25px auto;
+			width: 444px;
+		}
+
+		&__total {
+			width: 370px;
+		}
+
+		&__result {
+			font-size: 16px;
+			font-weight: 600;
+
+			span {
+				font-weight: 400;
+			}
+		}
 	}
 
 	.sidepanel {
