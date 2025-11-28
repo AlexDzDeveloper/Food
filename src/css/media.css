@@ -415,6 +415,19 @@
     height: 35px;
     padding: 0 10px;
   }
+  .promotion {
+    padding: 50px 0 80px;
+  }
+  .promotion__descr {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  .promotion__descr span {
+    font-size: 19px;
+  }
+  .promotion .timer__block {
+    width: 70px;
+  }
   .sidepanel {
     left: 12px;
   }

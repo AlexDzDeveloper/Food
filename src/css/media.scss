@@ -550,6 +550,25 @@
 		}
 	}
 
+	.promotion {
+		padding: 50px 0 80px;
+
+		&__descr {
+			font-size: 15px;
+			margin-top: 20px;
+
+			span {
+				font-size: 19px;
+			}
+		}
+
+		.timer {
+			&__block {
+				width: 70px;
+			}
+		}
+	}
+
 	.sidepanel {
 		left: 12px;
 	}
