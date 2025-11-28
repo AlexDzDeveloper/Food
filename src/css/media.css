@@ -428,6 +428,17 @@
   .promotion .timer__block {
     width: 70px;
   }
+  .footer {
+    padding: 35px 0 40px;
+    min-height: 150px;
+  }
+  .footer .subtitle {
+    font-size: 18px;
+  }
+  .footer .link {
+    font-size: 15px;
+    margin-top: 12px;
+  }
   .sidepanel {
     left: 12px;
   }

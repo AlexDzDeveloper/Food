@@ -569,6 +569,20 @@
 		}
 	}
 
+	.footer {
+		padding: 35px 0 40px;
+		min-height: 150px;
+
+		.subtitle {
+			font-size: 18px;
+		}
+
+		.link {
+			font-size: 15px;
+			margin-top: 12px;
+		}
+	}
+
 	.sidepanel {
 		left: 12px;
 	}
