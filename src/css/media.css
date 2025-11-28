@@ -396,6 +396,25 @@
     font-size: 12px;
     font-weight: 500;
   }
+  .order__form {
+    margin-top: 35px;
+    padding: 0 60px;
+  }
+  .order__form img {
+    transform: scale(1.2);
+  }
+  .order__form .btn_min {
+    font-size: 14px;
+    height: 40px;
+    width: 150px;
+    font-weight: 600;
+  }
+  .order__input {
+    width: 150px;
+    font-size: 14px;
+    height: 35px;
+    padding: 0 10px;
+  }
   .sidepanel {
     left: 12px;
   }

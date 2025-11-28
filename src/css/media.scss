@@ -525,6 +525,31 @@
 		}
 	}
 
+	.order {
+		&__form {
+			margin-top: 35px;
+			padding: 0 60px;
+
+			img {
+				transform: scale(1.2);
+			}
+
+			.btn_min {
+				font-size: 14px;
+				height: 40px;
+				width: 150px;
+				font-weight: 600;
+			}
+		}
+
+		&__input {
+			width: 150px;
+			font-size: 14px;
+			height: 35px;
+			padding: 0 10px;
+		}
+	}
+
 	.sidepanel {
 		left: 12px;
 	}
