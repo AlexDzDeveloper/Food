@@ -442,4 +442,25 @@
   .sidepanel {
     left: 12px;
   }
+  .modal__dialog {
+    width: 400px;
+    margin: 0 auto;
+  }
+  .modal__content {
+    padding: 20px;
+    width: 100%;
+  }
+  .modal__title {
+    font-size: 18px;
+    width: 360px;
+  }
+  .modal__input {
+    font-size: 15px;
+    width: 230px;
+    height: 40px;
+  }
+  .modal .btn {
+    width: 230px;
+    height: 42px;
+  }
 }/*# sourceMappingURL=media.css.map */
