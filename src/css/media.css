@@ -469,6 +469,12 @@
     width: 140px;
     height: 38px;
   }
+  .sidepanel {
+    display: none;
+  }
+  .container {
+    padding: 0 25px;
+  }
   .header {
     max-width: 576px;
     height: 80px;
@@ -499,5 +505,32 @@
   }
   .header__hamburger span.long {
     width: 33px;
+  }
+  .preview {
+    padding: 20px 0 75px;
+  }
+  .preview .bgc_blue {
+    height: 595px;
+  }
+  .preview .tabcontainer {
+    width: 576px;
+  }
+  .preview .tabcontainer .tabheader {
+    padding: 20px 10px;
+  }
+  .preview .tabcontainer .tabheader h3 {
+    font-size: 14px;
+  }
+  .preview .tabcontainer .tabcontent__descr {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 15px;
+    height: 120px;
+    right: -140px;
+  }
+  .preview__life {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 40px;
   }
 }/*# sourceMappingURL=media.css.map */

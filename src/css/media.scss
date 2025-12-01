@@ -622,6 +622,14 @@
 		height: 38px;
 	}
 
+	.sidepanel {
+		display: none;
+	}
+
+	.container {
+		padding: 0 25px;
+	}
+
 	.header {
 		max-width: 576px;
 		height: 80px;
@@ -655,6 +663,42 @@
 			span.long {
 				width: 33px;
 			}
+		}
+	}
+
+	.preview {
+		padding: 20px 0 75px;
+
+		.bgc_blue {
+			height: 595px;
+		}
+
+		.tabcontainer {
+			width: 576px;
+
+			.tabheader {
+				padding: 20px 10px;
+
+				h3 {
+					font-size: 14px;
+				}
+			}
+
+			.tabcontent {
+				&__descr {
+					font-size: 14px;
+					line-height: 22px;
+					padding: 15px;
+					height: 120px;
+					right: -140px;
+				}
+			}
+		}
+
+		&__life {
+			font-size: 16px;
+			font-weight: 500;
+			margin-left: 40px;
 		}
 	}
 }
