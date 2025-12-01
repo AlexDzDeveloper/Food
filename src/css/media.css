@@ -463,4 +463,41 @@
     width: 230px;
     height: 42px;
   }
+}
+@media (max-width: 767px) {
+  .btn {
+    width: 140px;
+    height: 38px;
+  }
+  .header {
+    max-width: 576px;
+    height: 80px;
+    padding: 0 20px;
+  }
+  .header__links {
+    display: none;
+  }
+  .header__right-block {
+    position: relative;
+    right: 60px;
+  }
+  .header__hamburger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    right: 25px;
+    height: 21px;
+    cursor: pointer;
+  }
+  .header__hamburger span {
+    display: block;
+    width: 27px;
+    height: 3px;
+    background-color: #151812;
+  }
+  .header__hamburger span.long {
+    width: 33px;
+  }
 }/*# sourceMappingURL=media.css.map */
