@@ -255,7 +255,6 @@
     padding: 20px 25px;
   }
   .offer {
-    padding: 20px 20px 60px;
     padding: 20px 0 60px;
   }
   .offer .bgc_y {
@@ -474,6 +473,10 @@
   }
   .container {
     padding: 0 25px;
+    width: 576px;
+  }
+  .title {
+    font-size: 22px;
   }
   .header {
     max-width: 576px;
@@ -531,6 +534,38 @@
   .preview__life {
     font-size: 16px;
     font-weight: 500;
-    margin-left: 40px;
+    margin-left: 10px;
+    width: 160px;
+    text-align: center;
+  }
+  .offer {
+    padding: 20px 0 40px;
+  }
+  .offer .bgc_y {
+    min-width: 576px;
+    height: 505px;
+  }
+  .offer__text {
+    width: 362px;
+  }
+  .offer__descr {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .offer__slider {
+    width: 319px;
+  }
+  .offer__slider-counter {
+    font-size: 18px;
+  }
+  .offer__slider-counter #current {
+    font-size: 30px;
+  }
+  .offer__slide {
+    height: 245px;
+  }
+  .offer__advantages {
+    width: 185px;
   }
 }/*# sourceMappingURL=media.css.map */
