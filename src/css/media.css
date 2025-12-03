@@ -510,26 +510,33 @@
     width: 33px;
   }
   .preview {
-    padding: 20px 0 75px;
+    padding: 20px 0 66px;
   }
   .preview .bgc_blue {
-    height: 595px;
+    height: 552px;
   }
   .preview .tabcontainer {
-    width: 576px;
+    width: 526px;
   }
   .preview .tabcontainer .tabheader {
+    width: 155px;
     padding: 20px 10px;
   }
   .preview .tabcontainer .tabheader h3 {
     font-size: 14px;
   }
+  .preview .tabcontainer .tabcontent {
+    width: 526px;
+  }
   .preview .tabcontainer .tabcontent__descr {
     font-size: 14px;
     line-height: 22px;
     padding: 15px;
-    height: 120px;
+    min-height: 120px;
+    height: 136px;
+    width: 370px;
     right: -140px;
+    top: 240px;
   }
   .preview__life {
     font-size: 16px;
@@ -562,8 +569,11 @@
   .offer__slider-counter #current {
     font-size: 30px;
   }
+  .offer__slider .carousel-indicators .dot {
+    background-color: #000;
+  }
   .offer__slide {
-    height: 245px;
+    height: 215px;
   }
   .offer__advantages {
     width: 185px;
