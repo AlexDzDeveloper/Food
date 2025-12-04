@@ -578,4 +578,50 @@
   .offer__advantages {
     width: 185px;
   }
+  .calculating__subtitle {
+    font-size: 15px;
+  }
+  .calculating__choose {
+    margin-top: 15px;
+  }
+  .calculating__choose-item {
+    width: 110px;
+    height: 33px;
+  }
+  .calculating__choose_medium {
+    width: 360px;
+  }
+  .calculating__choose_big {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 340px;
+    -moz-column-gap: 13px;
+         column-gap: 13px;
+  }
+  .calculating__choose_big .calculating__choose-item {
+    width: 160px;
+    margin-top: 15px;
+  }
+  .calculating__choose_big .calculating__choose-item:nth-child(1) {
+    margin-top: 0;
+  }
+  .calculating__choose_big .calculating__choose-item:nth-child(2) {
+    margin-top: 0;
+  }
+  .calculating__divider {
+    margin: 20px auto;
+  }
+  .calculating__total {
+    width: 320px;
+  }
+  .calculating__subtitle {
+    font-weight: 600;
+  }
+  .calculating__result {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .calculating__result span {
+    font-size: 30px;
+  }
 }/*# sourceMappingURL=media.css.map */
