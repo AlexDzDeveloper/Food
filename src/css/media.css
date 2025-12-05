@@ -627,4 +627,28 @@
   .order__form {
     padding: 0;
   }
+  .promotion {
+    padding: 30px 0 40px;
+  }
+  .promotion .bgc_y {
+    height: 336px;
+  }
+  .promotion__descr {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .promotion__descr span {
+    font-size: 17px;
+  }
+  .promotion__timer .timer {
+    padding-left: 30px;
+  }
+  .promotion__timer .timer__block {
+    width: 55px;
+    height: 90px;
+    font-size: 15px;
+  }
+  .promotion__timer .timer__block span {
+    font-size: 30px;
+  }
 }/*# sourceMappingURL=media.css.map */
