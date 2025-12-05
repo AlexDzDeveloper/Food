@@ -624,4 +624,7 @@
   .calculating__result span {
     font-size: 30px;
   }
+  .order__form {
+    padding: 0;
+  }
 }/*# sourceMappingURL=media.css.map */
