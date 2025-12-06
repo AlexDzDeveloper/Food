@@ -651,4 +651,10 @@
   .promotion__timer .timer__block span {
     font-size: 30px;
   }
+  .footer .subtitle {
+    font-size: 15px;
+  }
+  .footer .link {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=media.css.map */
