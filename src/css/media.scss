@@ -872,3 +872,31 @@
 		}
 	}
 }
+
+@media (max-width: 575px) {
+	.header {
+		max-width: 575px;
+
+		&__left-block {
+			min-width: 127px;
+		}
+
+		&__right-block {
+			display: none;
+		}
+
+		&__hamburger {
+			right: 0;
+			height: 18px;
+
+			span {
+				height: 2px;
+				width: 22px;
+
+				&.long {
+					width: 28px;
+				}
+			}
+		}
+	}
+}

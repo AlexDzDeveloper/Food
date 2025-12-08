@@ -657,4 +657,26 @@
   .footer .link {
     font-size: 14px;
   }
+}
+@media (max-width: 575px) {
+  .header {
+    max-width: 575px;
+  }
+  .header__left-block {
+    min-width: 127px;
+  }
+  .header__right-block {
+    display: none;
+  }
+  .header__hamburger {
+    right: 0;
+    height: 18px;
+  }
+  .header__hamburger span {
+    height: 2px;
+    width: 22px;
+  }
+  .header__hamburger span.long {
+    width: 28px;
+  }
 }/*# sourceMappingURL=media.css.map */
