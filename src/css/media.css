@@ -776,4 +776,40 @@
     background-color: #fff;
     height: 3px;
   }
+  .calculating {
+    padding: 20px 0;
+  }
+  .calculating .container {
+    padding: 0;
+  }
+  .calculating__field {
+    margin-top: 0;
+  }
+  .calculating__subtitle {
+    font-size: 14px;
+  }
+  .calculating__choose-item {
+    font-size: 13px;
+    width: 92px;
+    padding: 0 5px;
+  }
+  .calculating__choose_medium {
+    width: 300px;
+  }
+  .calculating__choose_big {
+    width: 300px;
+  }
+  .calculating__choose_big .calculating__choose-item {
+    width: 140px;
+  }
+  .calculating__divider {
+    width: 260px;
+    margin: 20px auto 10px;
+  }
+  .calculating__total {
+    width: 300px;
+  }
+  .calculating__result {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=media.css.map */

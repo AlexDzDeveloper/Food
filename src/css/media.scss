@@ -1028,4 +1028,54 @@
 			}
 		}
 	}
+
+	.calculating {
+		padding: 20px 0;
+
+		.container {
+			padding: 0;
+		}
+
+		&__field {
+			margin-top: 0;
+			// padding-bottom: 0;
+		}
+
+		&__subtitle {
+			font-size: 14px;
+		}
+
+		&__choose {
+			&-item {
+				font-size: 13px;
+				width: 92px;
+				padding: 0 5px;
+			}
+
+			&_medium {
+				width: 300px;
+			}
+
+			&_big {
+				width: 300px;
+
+				.calculating__choose-item {
+					width: 140px;
+				}
+			}
+		}
+
+		&__divider {
+			width: 260px;
+			margin: 20px auto 10px;
+		}
+
+		&__total {
+			width: 300px;
+		}
+
+		&__result {
+			font-size: 14px;
+		}
+	}
 }
