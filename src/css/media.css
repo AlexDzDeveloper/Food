@@ -812,4 +812,14 @@
   .calculating__result {
     font-size: 14px;
   }
+  .order__form {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .order__input {
+    font-size: 13px;
+  }
+  .order img {
+    display: none;
+  }
 }/*# sourceMappingURL=media.css.map */

@@ -1078,4 +1078,19 @@
 			font-size: 14px;
 		}
 	}
+
+	.order {
+		&__form {
+			flex-direction: column;
+			gap: 15px;
+		}
+
+		&__input {
+			font-size: 13px;
+		}
+
+		img {
+			display: none;
+		}
+	}
 }
