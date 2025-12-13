@@ -1128,4 +1128,20 @@
 			}
 		}
 	}
+
+		.modal {
+		width: 320px;
+		&__dialog {
+			width: 320px;
+		}
+
+		&__title {
+			font-size: 15px;
+			width: 280px;
+		}
+
+		&__input {
+			font-size: 14px;
+		}
+	}
 }
