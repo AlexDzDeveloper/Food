@@ -850,6 +850,15 @@
     justify-content: space-between;
     align-items: center;
   }
+  .footer {
+    padding: 20px 0 40px;
+  }
+  .footer .subtitle {
+    font-size: 12px;
+  }
+  .footer .link {
+    font-size: 13px;
+  }
   .modal {
     width: 320px;
   }

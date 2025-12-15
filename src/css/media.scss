@@ -1129,7 +1129,19 @@
 		}
 	}
 
-		.modal {
+	.footer {
+		padding: 20px 0 40px;
+
+		.subtitle {
+			font-size: 12px;
+		}
+
+		.link {
+			font-size: 13px;
+		}
+	}
+
+	.modal {
 		width: 320px;
 		&__dialog {
 			width: 320px;
