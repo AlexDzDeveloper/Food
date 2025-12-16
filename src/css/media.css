@@ -826,6 +826,49 @@
   .order img {
     display: none;
   }
+  .menu__field {
+    height: 700px;
+  }
+  .menu__field .menu__item {
+    position: absolute;
+    min-height: 150px;
+    height: 200px;
+    width: 300px;
+  }
+  .menu__field .menu__item img {
+    position: relative;
+    height: 150px;
+    width: 150px;
+  }
+  .menu__field .menu__item-subtitle, .menu__field .menu__item-descr {
+    position: relative;
+    right: -150px;
+    top: -150px;
+    width: 150px;
+  }
+  .menu__field .menu__item-divider, .menu__field .menu__item-price {
+    position: relative;
+  }
+  .menu__field .menu__item:first-child {
+    margin-top: 0;
+  }
+  .menu__field .menu__item:first-child .menu__item-divider, .menu__field .menu__item:first-child .menu__item-price {
+    top: -140px;
+  }
+  .menu__field .menu__item:nth-child(2) {
+    margin-top: 215px;
+    height: 220px;
+  }
+  .menu__field .menu__item:nth-child(2) .menu__item-divider, .menu__field .menu__item:nth-child(2) .menu__item-price {
+    top: -150px;
+  }
+  .menu__field .menu__item:last-child {
+    margin-top: 455px;
+    height: 200px;
+  }
+  .menu__field .menu__item:last-child .menu__item-divider, .menu__field .menu__item:last-child .menu__item-price {
+    top: -120px;
+  }
   .promotion .container {
     flex-direction: column;
   }
