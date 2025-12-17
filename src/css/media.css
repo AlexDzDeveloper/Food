@@ -849,11 +849,21 @@
   .menu__field .menu__item-divider, .menu__field .menu__item-price {
     position: relative;
   }
+  .menu__field .menu__item-cost {
+    font-size: 13px;
+  }
+  .menu__field .menu__item-total {
+    font-size: 12px;
+  }
+  .menu__field .menu__item-total span {
+    font-size: 13px;
+    font-weight: 700;
+  }
   .menu__field .menu__item:first-child {
     margin-top: 0;
   }
   .menu__field .menu__item:first-child .menu__item-divider, .menu__field .menu__item:first-child .menu__item-price {
-    top: -140px;
+    top: -144px;
   }
   .menu__field .menu__item:nth-child(2) {
     margin-top: 215px;

@@ -1123,21 +1123,29 @@
 
 				&-divider, &-price {
 					position: relative;
-					// top: -140px;
+				}
+
+				&-cost {
+					font-size: 13px;
+				}
+
+				&-total {
+					font-size: 12px;
+					span {
+						font-size: 13px;
+						font-weight: 700;
+					}
 				}
 
 				&:first-child {
 					margin-top: 0;
 					.menu__item-divider, .menu__item-price {
-						top: -140px;
+						top: -144px;
 					}
 				}
 				&:nth-child(2) {
 					margin-top: 215px;
 					height: 220px;
-					// .menu__item img{
-					// 	margin-top: 15px;
-					// }
 					.menu__item-divider, .menu__item-price {
 						top: -150px;
 					}
