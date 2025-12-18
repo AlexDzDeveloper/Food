@@ -628,6 +628,30 @@
 
 	.sidepanel {
 		display: none;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		height: 30px;
+		width: 363px;
+		padding: 0 20px;
+		top: 24px;
+		margin: 0 auto;
+		left: 0;
+
+		&__text {
+			span {
+				position: relative;
+				top: 60px;
+				transform: rotate(0deg) translateY(-50%);
+			}
+		}
+
+		&__divider {
+			height: 1px;
+			width: 80px;
+			// display: none;
+		}
 	}
 
 	.container {
@@ -917,7 +941,6 @@
 		width: 295px;
 		margin: 0 auto;
 		margin-top: 20px;
-		// vertical-align: middle;
 	}
 
 	#first-divider {
