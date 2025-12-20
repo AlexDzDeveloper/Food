@@ -627,7 +627,7 @@
 	}
 
 	.sidepanel {
-		display: none;
+		// display: none;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
@@ -669,7 +669,10 @@
 		padding: 0 20px;
 
 		&__links {
-			display: none;
+			// display: none;
+			position: relative;
+			top: 24px;
+			left: -23px;
 		}
 
 		&__right-block {
