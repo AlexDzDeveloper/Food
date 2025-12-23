@@ -11,6 +11,7 @@ import slider from './js/modules/slider';
 import tabs from './js/modules/tabs';
 import timer from './js/modules/timer';
 import {openModal} from './js/modules/modal';
+import hamburger from './js/modules/hamburger';
 
 //назначаємо глобальний обробник подій DOMContentLoaded
 window.addEventListener('DOMContentLoaded', () => {
@@ -26,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	calc();
 	cards();
+	hamburger();
 	forms('form', modalTimerId);
 	modal('[data-modal]', '.modal', modalTimerId);
 	tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');

@@ -490,6 +490,26 @@ function forms(formSelector, modalTimerId) {
 
 /***/ }),
 
+/***/ "./src/js/modules/hamburger.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/hamburger.js ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function hamburger() {
+  var burger = document.querySelector('.header__hamburger'),
+    burgerLineTop = burger.querySelector('.top'),
+    burgerLineMiddle = burger.querySelector('.long'),
+    burgerLineBottom = burger.querySelector('.bottom'),
+    sidepanel = document.querySelector('.sidepanel'),
+    headerLinks = document.querySelector('.header__links');
+}
+/* harmony default export */ __webpack_exports__["default"] = (hamburger);
+
+/***/ }),
+
 /***/ "./src/js/modules/modal.js":
 /*!*********************************!*\
   !*** ./src/js/modules/modal.js ***!
@@ -9035,10 +9055,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_modules_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/modules/slider */ "./src/js/modules/slider.js");
 /* harmony import */ var _js_modules_tabs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/modules/tabs */ "./src/js/modules/tabs.js");
 /* harmony import */ var _js_modules_timer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js/modules/timer */ "./src/js/modules/timer.js");
+/* harmony import */ var _js_modules_hamburger__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js/modules/hamburger */ "./src/js/modules/hamburger.js");
 (__webpack_require__(/*! es6-promise */ "./node_modules/es6-promise/dist/es6-promise.js").polyfill)();
 
 
 // import 'slick-slider';//приклад використання slick-slider, імпортуючи його із нод-пакета. Таким чином не потрібно додатково завантажувати і підключати додатковий файл скриптів
+
 
 
 
@@ -9065,6 +9087,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   (0,_js_modules_calc__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_js_modules_cards__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_js_modules_hamburger__WEBPACK_IMPORTED_MODULE_8__["default"])();
   (0,_js_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])('form', modalTimerId);
   (0,_js_modules_modal__WEBPACK_IMPORTED_MODULE_4__["default"])('[data-modal]', '.modal', modalTimerId);
   (0,_js_modules_tabs__WEBPACK_IMPORTED_MODULE_6__["default"])('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
