@@ -473,6 +473,7 @@
     height: 38px;
   }
   .sidepanel {
+    display: none;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -511,6 +512,7 @@
     padding: 0 20px;
   }
   .header__links {
+    display: none;
     position: relative;
     top: 13px;
     left: -23px;

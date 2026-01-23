@@ -21,6 +21,16 @@
 	color: red;
 }
 
+.overlay {
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 100vw;
+	background-color: rgba(256, 256, 256, 0.9);
+	z-index: -1;
+	/* z-index: 16; */
+}
+
 .carousel-indicators {
     position: absolute;
     right: 0;

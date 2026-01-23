@@ -504,7 +504,34 @@ function hamburger() {
     burgerLineMiddle = burger.querySelector('.long'),
     burgerLineBottom = burger.querySelector('.bottom'),
     sidepanel = document.querySelector('.sidepanel'),
-    headerLinks = document.querySelector('.header__links');
+    headerLinks = document.querySelector('.header__links'),
+    overlay = document.querySelector('.overlay');
+  burger.addEventListener('click', function () {
+    burger.classList.add = 'active';
+    console.log('click');
+    active();
+
+    // burger.classList.contains('active') ?
+  });
+  function active() {
+    burger.style.zIndex = '18';
+    burgerLineMiddle.style.display = 'none';
+    burgerLineTop.style.transform = 'rotate(45deg) translateY(13px)';
+    burgerLineTop.style.transition = 'transform 0.5s ease';
+    burgerLineBottom.style.transform = 'rotate(-45deg) translateY(-13px)';
+    burgerLineBottom.style.transition = 'transform 0.5s ease';
+    burgerLineBottom.style.backgroundColor = 'red';
+    burgerLineTop.style.backgroundColor = 'red';
+    headerLinks.style.display = 'block';
+    headerLinks.style.zIndex = '18';
+    sidepanel.style.display = 'flex';
+    sidepanel.style.zIndex = '17';
+    overlay.style.zIndex = '16';
+  }
+
+  // function close() {
+  // 	burger.style.
+  // }
 }
 /* harmony default export */ __webpack_exports__["default"] = (hamburger);
 
@@ -9073,10 +9100,10 @@ __webpack_require__.r(__webpack_exports__);
 
 //назначаємо глобальний обробник подій DOMContentLoaded
 window.addEventListener('DOMContentLoaded', function () {
-  //Автоматичне відкриття модального вікна, коли користувач пробув на сторінці 10сек
+  //Автоматичне відкриття модального вікна, коли користувач пробув на сторінці 20сек
   var modalTimerId = setTimeout(function () {
     return (0,_js_modules_modal__WEBPACK_IMPORTED_MODULE_4__.openModal)('.modal', modalTimerId);
-  }, 50000);
+  }, 20000);
   /* 	const calc = require('./modules/calc'),
   		cards = require('./modules/cards'),
   		forms = require('./modules/forms'),
@@ -9091,7 +9118,7 @@ window.addEventListener('DOMContentLoaded', function () {
   (0,_js_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])('form', modalTimerId);
   (0,_js_modules_modal__WEBPACK_IMPORTED_MODULE_4__["default"])('[data-modal]', '.modal', modalTimerId);
   (0,_js_modules_tabs__WEBPACK_IMPORTED_MODULE_6__["default"])('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
-  (0,_js_modules_timer__WEBPACK_IMPORTED_MODULE_7__["default"])('.timer', '2026-01-13');
+  (0,_js_modules_timer__WEBPACK_IMPORTED_MODULE_7__["default"])('.timer', '2026-02-13');
   (0,_js_modules_slider__WEBPACK_IMPORTED_MODULE_5__["default"])({
     //порушуємо порядок передання аргументів для впевненості в деструктуризаціїї
     container: '.offer__slider',
@@ -9104,13 +9131,6 @@ window.addEventListener('DOMContentLoaded', function () {
     field: '.offer__slider-inner'
   });
 });
-
-// const myModule = require('./js/main');
-
-// const myModuleInstance = new myModule();
-
-// myModuleInstance.hello();
-// myModuleInstance.goodbye();
 }();
 /******/ })()
 ;

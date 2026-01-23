@@ -15,8 +15,8 @@ import hamburger from './js/modules/hamburger';
 
 //назначаємо глобальний обробник подій DOMContentLoaded
 window.addEventListener('DOMContentLoaded', () => {
-	//Автоматичне відкриття модального вікна, коли користувач пробув на сторінці 10сек
-	const modalTimerId = setTimeout(() => openModal('.modal', modalTimerId), 50000);
+	//Автоматичне відкриття модального вікна, коли користувач пробув на сторінці 20сек
+	const modalTimerId = setTimeout(() => openModal('.modal', modalTimerId), 20000);
 /* 	const calc = require('./modules/calc'),
 		cards = require('./modules/cards'),
 		forms = require('./modules/forms'),
@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	forms('form', modalTimerId);
 	modal('[data-modal]', '.modal', modalTimerId);
 	tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
-	timer('.timer', '2026-01-13');
+	timer('.timer', '2026-02-13');
 	slider({//порушуємо порядок передання аргументів для впевненості в деструктуризаціїї
 		container: '.offer__slider',
 		nextArrow: '.offer__slider-next',
@@ -44,10 +44,3 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 
 });
-
-// const myModule = require('./js/main');
-
-// const myModuleInstance = new myModule();
-
-// myModuleInstance.hello();
-// myModuleInstance.goodbye();
