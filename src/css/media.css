@@ -731,6 +731,20 @@
   .title {
     font-size: 17px;
   }
+  .sidepanel {
+    max-width: 320px;
+    padding: 110px 45px 40px;
+  }
+  .sidepanel__divider {
+    display: none;
+  }
+  /*  робота із бургер-меню */
+  .menu-open .header__hamburger .top {
+    transform: rotate(45deg) translateY(11px);
+  }
+  .menu-open .header__hamburger .bottom {
+    transform: rotate(-45deg) translateY(-11px);
+  }
   .header {
     max-width: 575px;
   }
