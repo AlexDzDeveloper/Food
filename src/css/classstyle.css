@@ -26,9 +26,11 @@
 	position: absolute;
 	height: 100%;
 	width: 100vw;
-	background-color: rgba(256, 256, 256, 0.9);
-	z-index: -1;
-	/* z-index: 16; */
+	background-color: rgb(256, 256, 256);
+	z-index: 16;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s ease;
 }
 
 .carousel-indicators {

@@ -500,38 +500,13 @@ function forms(formSelector, modalTimerId) {
 __webpack_require__.r(__webpack_exports__);
 function hamburger() {
   var burger = document.querySelector('.header__hamburger'),
-    burgerLineTop = burger.querySelector('.top'),
-    burgerLineMiddle = burger.querySelector('.long'),
-    burgerLineBottom = burger.querySelector('.bottom'),
-    sidepanel = document.querySelector('.sidepanel'),
-    headerLinks = document.querySelector('.header__links'),
     overlay = document.querySelector('.overlay');
   burger.addEventListener('click', function () {
-    burger.classList.add = 'active';
-    console.log('click');
-    active();
-
-    // burger.classList.contains('active') ?
+    document.body.classList.toggle('menu-open');
   });
-  function active() {
-    burger.style.zIndex = '18';
-    burgerLineMiddle.style.display = 'none';
-    burgerLineTop.style.transform = 'rotate(45deg) translateY(13px)';
-    burgerLineTop.style.transition = 'transform 0.5s ease';
-    burgerLineBottom.style.transform = 'rotate(-45deg) translateY(-13px)';
-    burgerLineBottom.style.transition = 'transform 0.5s ease';
-    burgerLineBottom.style.backgroundColor = 'red';
-    burgerLineTop.style.backgroundColor = 'red';
-    headerLinks.style.display = 'block';
-    headerLinks.style.zIndex = '18';
-    sidepanel.style.display = 'flex';
-    sidepanel.style.zIndex = '17';
-    overlay.style.zIndex = '16';
-  }
-
-  // function close() {
-  // 	burger.style.
-  // }
+  overlay.addEventListener('click', function () {
+    document.body.classList.remove('menu-open');
+  });
 }
 /* harmony default export */ __webpack_exports__["default"] = (hamburger);
 

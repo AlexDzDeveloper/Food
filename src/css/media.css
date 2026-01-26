@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header__hamburger {
   display: none;
 }
@@ -472,8 +473,32 @@
     width: 140px;
     height: 38px;
   }
-  .sidepanel {
+  /*  робота із бургер-меню */
+  .menu-open .sidepanel {
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu-open .overlay {
+    opacity: 0.85;
+    visibility: visible;
+  }
+  .menu-open .header__links {
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu-open .header__hamburger .top {
+    background-color: red;
+    transform: rotate(45deg) translateY(13px);
+  }
+  .menu-open .header__hamburger .long {
     display: none;
+  }
+  .menu-open .header__hamburger .bottom {
+    background-color: red;
+    transform: rotate(-45deg) translateY(-13px);
+  }
+  .sidepanel {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -488,7 +513,10 @@
     transform: translateX(-50%);
     left: 50%;
     background-color: #fff;
-    opacity: 0.9;
+    opacity: 0;
+    z-index: 17;
+    transition: opacity 0.3s ease;
+    visibility: hidden;
   }
   .sidepanel__text span {
     position: relative;
@@ -496,8 +524,8 @@
     transform: rotate(0deg) translateY(-50%);
   }
   .sidepanel__divider {
-    height: 1px;
-    width: 80px;
+    height: 2px;
+    width: 30px;
   }
   .container {
     padding: 0 25px;
@@ -512,11 +540,13 @@
     padding: 0 20px;
   }
   .header__links {
-    display: none;
     position: relative;
     top: 13px;
     left: -23px;
-    z-index: 3;
+    z-index: 18;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
   .header__right-block {
     position: relative;
@@ -530,17 +560,19 @@
     align-items: flex-end;
     right: 25px;
     height: 21px;
-    z-index: 3;
+    z-index: 18;
     cursor: pointer;
   }
-  .header__hamburger span {
-    display: block;
+  .header__hamburger .top, .header__hamburger .bottom {
     width: 27px;
     height: 3px;
     background-color: #151812;
+    transition: transform 0.45s ease, background-color 0.35s ease;
   }
-  .header__hamburger span.long {
+  .header__hamburger .long {
     width: 33px;
+    height: 3px;
+    background-color: #151812;
   }
   .preview {
     padding: 20px 0 66px;

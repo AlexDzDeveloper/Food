@@ -626,13 +626,49 @@
 		height: 38px;
 	}
 
+	/*  робота із бургер-меню */
+
+	.menu-open {
+
+		.sidepanel {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.overlay {
+			opacity: 0.85;
+			visibility: visible;
+		}
+
+		.header__links {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.header__hamburger {
+
+			.top {
+				background-color: red;
+				transform: rotate(45deg) translateY(13px);
+			}
+
+			.long {
+				display: none;
+			}
+
+			.bottom {
+				background-color: red;
+				transform: rotate(-45deg) translateY(-13px);
+			}
+		}
+	}
+
 	.sidepanel {
-		display: none;
+		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
 		position: absolute;
-		// vertical-align: middle;
 		height: 130px;
 		width: 363px;
 		width: 100%;
@@ -643,7 +679,10 @@
 		transform: translateX(-50%);
 		left: 50%;
 		background-color: #fff;
-		opacity: 0.9;
+		opacity: 0;
+		z-index: 17;
+		transition: opacity 0.3s ease;
+		visibility: hidden;
 
 		&__text {
 			span {
@@ -654,9 +693,8 @@
 		}
 
 		&__divider {
-			height: 1px;
-			width: 80px;
-			// display: none;
+			height: 2px;
+			width: 30px;
 		}
 	}
 
@@ -675,11 +713,13 @@
 		padding: 0 20px;
 
 		&__links {
-			display: none;
 			position: relative;
 			top: 13px;
 			left: -23px;
-			z-index: 3;
+			z-index: 18;
+			visibility: hidden;
+			opacity: 0;
+			transition: opacity 0.3s ease;
 		}
 
 		&__right-block {
@@ -695,17 +735,20 @@
 			align-items: flex-end;
 			right: 25px;
 			height: 21px;
-			z-index: 3;
+			z-index: 18;
 			cursor: pointer;
 
-			span {
-				display: block;
+			.top, .bottom {
 				width: 27px;
 				height: 3px;
 				background-color: #151812;
+				transition: transform 0.45s ease, background-color 0.35s ease;
 			}
-			span.long {
+
+			.long {
 				width: 33px;
+				height: 3px;
+				background-color: #151812;
 			}
 		}
 	}
@@ -920,6 +963,12 @@
 
 	.title {
 		font-size: 17px;
+	}
+
+	.sidepanel {
+		&__divider {
+			// display: none;
+		}
 	}
 
 	.header {
