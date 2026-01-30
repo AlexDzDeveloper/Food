@@ -12,7 +12,7 @@ function cards() {
 			this.price = price;
 			this.classes = classes;//це []
 			this.parent = document.querySelector(parentSelector);
-			this.transfer = 37;//курс для конвертації, в майбутньому тут буде курс приходити з НБУ
+			this.transfer = 43;//курс для конвертації, в майбутньому тут буде курс приходити з НБУ
 			this.changeToUAN();
 		}
 
@@ -61,8 +61,11 @@ function cards() {
 	*/
 
 
+//чисто для локальної версії на json-server
+	// getResource('http://localhost:3000/menu')
 
-	getResource('http://localhost:3000/menu')
+	//для роботи як локально, так і на прод
+	getResource('/menu')
 		.then(data => {
 			//Використовуємо деструктуризацію, щоб код не розтягувався
 			data.forEach(({img, altimg, title, descr, price}) => {

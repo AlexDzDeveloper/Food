@@ -203,7 +203,7 @@ function cards() {
       }
       this.classes = classes; //це []
       this.parent = document.querySelector(parentSelector);
-      this.transfer = 37; //курс для конвертації, в майбутньому тут буде курс приходити з НБУ
+      this.transfer = 43; //курс для конвертації, в майбутньому тут буде курс приходити з НБУ
       this.changeToUAN();
     }
 
@@ -252,7 +252,11 @@ function cards() {
   	div.render();
   */
 
-  (0,_services_services__WEBPACK_IMPORTED_MODULE_12__.getResource)('http://localhost:3000/menu').then(function (data) {
+  //чисто для локальної версії на json-server
+  // getResource('http://localhost:3000/menu')
+
+  //для роботи як локально, так і на прод
+  (0,_services_services__WEBPACK_IMPORTED_MODULE_12__.getResource)('/menu').then(function (data) {
     //Використовуємо деструктуризацію, щоб код не розтягувався
     data.forEach(function (_ref) {
       var img = _ref.img,
@@ -421,7 +425,12 @@ function forms(formSelector, modalTimerId) {
 
       //повертаємо Promise із postData і обробляємо його
       // postData('http://localhost:3000/requests', JSON.stringify(object))
-      (0,_services_services__WEBPACK_IMPORTED_MODULE_8__.postData)('http://localhost:3000/requests', json).then(function (data) {
+
+      //Варіант тільки для локального json-server
+      // postData('http://localhost:3000/requests', json)
+
+      //Варіант для роботи локально + прод
+      (0,_services_services__WEBPACK_IMPORTED_MODULE_8__.postData)('/requests', json).then(function (data) {
         console.log(data);
         //кастомізуємо відповідь користувачу в залежності від статусу, вікористовуючи модальне вікно
         showThanksModal(message.success);
@@ -1030,28 +1039,39 @@ function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyri
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+// Визначаємо базовий URL залежно від середовища
+// localhost  → json-server
+// production → реальний домен
+var BASE_URL = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://food.webdevdz.co.ua';
+
+// POST-запит (відправка даних, наприклад з форм)
 var postData = /*#__PURE__*/function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(url, data) {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(path, data) {
     var res;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return fetch(url, {
-            method: "POST",
+          return fetch("".concat(BASE_URL).concat(path), {
+            method: 'POST',
             headers: {
               'Content-Type': 'application/json'
             },
-            //перетворюємо {formData} в формат JSON
             body: data
           });
         case 2:
           res = _context.sent;
-          _context.next = 5;
-          return res.json();
+          if (res.ok) {
+            _context.next = 5;
+            break;
+          }
+          throw new Error("Could not POST ".concat(path, ", status: ").concat(res.status));
         case 5:
+          _context.next = 7;
+          return res.json();
+        case 7:
           return _context.abrupt("return", _context.sent);
-        case 6:
+        case 8:
         case "end":
           return _context.stop();
       }
@@ -1062,22 +1082,22 @@ var postData = /*#__PURE__*/function () {
   };
 }();
 
-//Пишемо ф-цію для побудови карточок на сайті із отриманих даних
+// GET-запит (отримання даних)
 var getResource = /*#__PURE__*/function () {
-  var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(url) {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(path) {
     var res;
     return _regeneratorRuntime().wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
           _context2.next = 2;
-          return fetch(url);
+          return fetch("".concat(BASE_URL).concat(path));
         case 2:
           res = _context2.sent;
           if (res.ok) {
             _context2.next = 5;
             break;
           }
-          throw new Error("Could not fetch ".concat(url, ", status: ").concat(res.status));
+          throw new Error("Could not fetch ".concat(path, ", status: ").concat(res.status));
         case 5:
           _context2.next = 7;
           return res.json();
@@ -1095,6 +1115,45 @@ var getResource = /*#__PURE__*/function () {
 }();
 
 
+//Робочий на локальному сервері
+// const postData = async (url, data) => {
+// 	const res = await fetch(url, {
+// 		method: "POST",
+// 		headers: {
+// 			'Content-Type': 'application/json'
+// 		},
+// 		//перетворюємо {formData} в формат JSON
+// 		body: data
+// 	});
+
+// 	//повертаємо Promise. Прописуємо await, так як не знаємо, скільки даних нам прийде у відповіді, тому чекаємо на їх обробку, і тільки після обробки виконуємо return
+// 	return await res.json();
+// };
+
+// 	//Пишемо ф-цію для побудови карточок на сайті із отриманих даних
+// 	const getResource = async (url) => {
+// 		let res = await fetch(url);
+
+// 		console.log(url);
+
+// 		//Вручну обробляємо ситуацію, коли HTTP дає помилку, для того, щоб запустився catch() (reject()) (так як fetch() не буде це вважати помилкою)
+// /*
+// 		У поверненого Promise є наступні властивості для огляду результату від сервера:
+// 			- .ok() - коли все пройшло успішно
+// 			- status() - попадаємо на повернутий сервером статус (використовуємо код статусу)
+//  */
+// 		if (!res.ok) {
+// 			//Викидаємо обʼєкт помилки {}, коли все пройшло не ок
+// 			//Створюєится нова помилка, і оператор throw її викидає
+// 			throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+// 		}
+
+// 		//повертаємо Promise. Прописуємо await, так як не знаємо, скільки даних нам прийде у відповіді, тому чекаємо на їх обробку, і тільки після обробки виконуємо return
+// 		return await res.json();
+// 	};
+
+// export { postData };
+// export { getResource };
 
 /***/ }),
 

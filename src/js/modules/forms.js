@@ -94,7 +94,12 @@ function forms(formSelector, modalTimerId) {
 
 			//повертаємо Promise із postData і обробляємо його
 			// postData('http://localhost:3000/requests', JSON.stringify(object))
-			postData('http://localhost:3000/requests', json)
+
+			//Варіант тільки для локального json-server
+			// postData('http://localhost:3000/requests', json)
+
+			//Варіант для роботи локально + прод
+			postData('/requests', json)
 			.then(data => {
 				console.log(data);
 				//кастомізуємо відповідь користувачу в залежності від статусу, вікористовуючи модальне вікно
