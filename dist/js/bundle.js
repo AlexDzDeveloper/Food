@@ -1039,12 +1039,85 @@ function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyri
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-// Визначаємо базовий URL залежно від середовища
-// localhost  → json-server
-// production → реальний домен
-var BASE_URL = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://food.webdevdz.co.ua';
+// // Визначаємо базовий URL залежно від середовища
+// // localhost  → json-server
+// // production → реальний домен
+// const BASE_URL =
+//   window.location.hostname === 'localhost'
+//     ? 'http://localhost:3000'
+//     : 'https://food.webdevdz.co.ua';
 
-// POST-запит (відправка даних, наприклад з форм)
+// // POST-запит (відправка даних, наприклад з форм)
+// const postData = async (path, data) => {
+//   const res = await fetch(`${BASE_URL}${path}`, {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: data
+//   });
+
+//   if (!res.ok) {
+//     throw new Error(`Could not POST ${path}, status: ${res.status}`);
+//   }
+
+//   return await res.json();
+// };
+
+// // GET-запит (отримання даних)
+// const getResource = async (path) => {
+//   const res = await fetch(`${BASE_URL}${path}`);
+
+//   if (!res.ok) {
+//     throw new Error(`Could not fetch ${path}, status: ${res.status}`);
+//   }
+
+//   return await res.json();
+// };
+
+// export { postData, getResource };
+
+// //Робочий на локальному сервері
+// // const postData = async (url, data) => {
+// // 	const res = await fetch(url, {
+// // 		method: "POST",
+// // 		headers: {
+// // 			'Content-Type': 'application/json'
+// // 		},
+// // 		//перетворюємо {formData} в формат JSON
+// // 		body: data
+// // 	});
+
+// // 	//повертаємо Promise. Прописуємо await, так як не знаємо, скільки даних нам прийде у відповіді, тому чекаємо на їх обробку, і тільки після обробки виконуємо return
+// // 	return await res.json();
+// // };
+
+// // 	//Пишемо ф-цію для побудови карточок на сайті із отриманих даних
+// // 	const getResource = async (url) => {
+// // 		let res = await fetch(url);
+
+// // 		console.log(url);
+
+// // 		//Вручну обробляємо ситуацію, коли HTTP дає помилку, для того, щоб запустився catch() (reject()) (так як fetch() не буде це вважати помилкою)
+// // /*
+// // 		У поверненого Promise є наступні властивості для огляду результату від сервера:
+// // 			- .ok() - коли все пройшло успішно
+// // 			- status() - попадаємо на повернутий сервером статус (використовуємо код статусу)
+// //  */
+// // 		if (!res.ok) {
+// // 			//Викидаємо обʼєкт помилки {}, коли все пройшло не ок
+// // 			//Створюєится нова помилка, і оператор throw її викидає
+// // 			throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+// // 		}
+
+// // 		//повертаємо Promise. Прописуємо await, так як не знаємо, скільки даних нам прийде у відповіді, тому чекаємо на їх обробку, і тільки після обробки виконуємо return
+// // 		return await res.json();
+// // 	};
+
+// // export { postData };
+// // export { getResource };
+
+var BASE_URL = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://food-api.onrender.com';
 var postData = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(path, data) {
     var res;
@@ -1081,8 +1154,6 @@ var postData = /*#__PURE__*/function () {
     return _ref.apply(this, arguments);
   };
 }();
-
-// GET-запит (отримання даних)
 var getResource = /*#__PURE__*/function () {
   var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(path) {
     var res;
@@ -1114,46 +1185,6 @@ var getResource = /*#__PURE__*/function () {
   };
 }();
 
-
-//Робочий на локальному сервері
-// const postData = async (url, data) => {
-// 	const res = await fetch(url, {
-// 		method: "POST",
-// 		headers: {
-// 			'Content-Type': 'application/json'
-// 		},
-// 		//перетворюємо {formData} в формат JSON
-// 		body: data
-// 	});
-
-// 	//повертаємо Promise. Прописуємо await, так як не знаємо, скільки даних нам прийде у відповіді, тому чекаємо на їх обробку, і тільки після обробки виконуємо return
-// 	return await res.json();
-// };
-
-// 	//Пишемо ф-цію для побудови карточок на сайті із отриманих даних
-// 	const getResource = async (url) => {
-// 		let res = await fetch(url);
-
-// 		console.log(url);
-
-// 		//Вручну обробляємо ситуацію, коли HTTP дає помилку, для того, щоб запустився catch() (reject()) (так як fetch() не буде це вважати помилкою)
-// /*
-// 		У поверненого Promise є наступні властивості для огляду результату від сервера:
-// 			- .ok() - коли все пройшло успішно
-// 			- status() - попадаємо на повернутий сервером статус (використовуємо код статусу)
-//  */
-// 		if (!res.ok) {
-// 			//Викидаємо обʼєкт помилки {}, коли все пройшло не ок
-// 			//Створюєится нова помилка, і оператор throw її викидає
-// 			throw new Error(`Could not fetch ${url}, status: ${res.status}`);
-// 		}
-
-// 		//повертаємо Promise. Прописуємо await, так як не знаємо, скільки даних нам прийде у відповіді, тому чекаємо на їх обробку, і тільки після обробки виконуємо return
-// 		return await res.json();
-// 	};
-
-// export { postData };
-// export { getResource };
 
 /***/ }),
 

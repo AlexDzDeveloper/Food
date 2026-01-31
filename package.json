@@ -24,6 +24,7 @@
 		"webpack-dev-server": "^4.15.1"
 	},
 	"dependencies": {
+		"cors": "^2.8.6",
 		"es6-promise": "^4.2.8",
 		"express": "^5.2.1",
 		"nodelist-foreach-polyfill": "^1.2.0",
