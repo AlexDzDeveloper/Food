@@ -2,10 +2,11 @@
 	"name": "food",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "server/server.js",
 	"scripts": {
+		"start": "node server/server.js",
 		"server": "json-server -w db.json",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build": "webpack"
 	},
 	"author": "",
 	"license": "ISC",
@@ -26,7 +27,7 @@
 	"dependencies": {
 		"cors": "^2.8.6",
 		"es6-promise": "^4.2.8",
-		"express": "^5.2.1",
+		"express": "^4.18.2",
 		"nodelist-foreach-polyfill": "^1.2.0",
 		"path-browserify": "^1.0.1",
 		"scss": "^0.2.4"
