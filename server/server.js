@@ -1,105 +1,59 @@
-/* ІМПОРТИ ЗАЛЕЖНОСТЕЙ*/
+// 0. Імпортую потрібні модулі
+const express = require('express');   // фреймворк для створення веб‑сервера
+const path = require('path');         // модуль для роботи з файловими шляхами
+const fs = require('fs');             // модуль для читання/запису файлів
 
-// Express — фреймворк для створення сервера на Node.js
-const express = require('express');
+// 1. Створюю додаток Express
+const app = express();                // створюємо екземпляр сервера
+const PORT = 3000;                    // порт, на якому буде працювати сервер
 
-// Path — утиліта для коректної роботи з шляхами до файлів
-const path = require('path');
-
-// File System — для читання файлів (db.json)
-const fs = require('fs');
-
-
-/*СТВОРЕННЯ СЕРВЕРНОГО ЗАСТОСУНКУ*/
-
-// Ініціалізуємо express-застосунок
-const app = express();
-
-// Порт, на якому буде працювати сервер
-const PORT = 3000;
-
-
-/* MIDDLEWARE (ПРОМІЖНІ ОБРОБНИКИ)*/
-
-/*
- * Дозволяє серверу приймати JSON у body запиту
- * Без цього req.body буде undefined
- */
+// 2. Middleware (проміжні обробники)
+// Цей middleware дозволяє Express автоматично парсити JSON‑дані, які приходять у тілі POST‑запитів (req.body).
 app.use(express.json());
 
-/*
- * Дозволяє віддавати статичні файли:
- * HTML, CSS, JS, картинки і т.д.
- *
- * Тут вказую корінь проекту,
- * бо index.html, css, images — не в dist
- */
-app.use(express.static(path.join(__dirname, '../')));
+// 3. Статичні файли
+// Кажу Express: "все, що лежить у папці src — доступне напряму з кореня /"
+app.use(express.static(
+  path.join(__dirname, '..', 'src')
+));
 
+// Якщо збірка JS лежить у dist, роблю її доступною з /dist
+app.use('/dist', express.static(
+  path.join(__dirname, '..', 'dist')
+));
 
-/* API: ОТРИМАННЯ МЕНЮ*/
-
-/*
- * GET /menu
- * Використовується фронтендом для отримання карток меню
- */
+// 4. API‑ендпоінти
+// GET /menu — повертає список меню з db.json
 app.get('/menu', (req, res) => {
-	try {
-		// Читаємо файл db.json
-		const data = JSON.parse(
-			fs.readFileSync(path.join(__dirname, '../db.json'), 'utf8')
-		);
+  // читаю файл db.json
+  const data = fs.readFileSync(
+    path.join(__dirname, '..', 'db.json'),
+    'utf-8'
+  );
 
-		// Повертаємо тільки масив menu
-		res.json(data.menu);
-	} catch (error) {
-		res.status(500).json({ message: 'Error reading menu data' });
-	}
+  // паршу JSON і відправляю тільки поле menu
+  res.json(JSON.parse(data).menu);
 });
 
-
-/* API: ОБРОБКА ФОРМИ*/
-
-/*
- * POST /requests
- * Приймає дані з форми (name, phone)
- */
+// POST /requests — приймає дані від користувача
 app.post('/requests', (req, res) => {
-	// Дані, які прийшли з фронтенду
-	const formData = req.body;
+  // виводимо дані, які користувач відправив у запиті, в консоль
+  console.log('Отримано дані від користувача:', req.body);
 
-	// Для наочності просто логимо
-	console.log(formData);
-
-	/**
-	 * Тут у реальному проекті можна:
-	 * - записати в базу
-	 * - відправити email
-	 * - передати в CRM
-	 */
-
-	// Повертаю відповідь клієнту
-	res.json(formData);
+  // відповідаємо клієнту, що все ок
+  res.status(200).json({ status: 'ok' });
 });
 
-
-/* FALLBACK-РОУТ (SPA)*/
-
-/*
- * Якщо жоден роут не підійшов —
- * віддаю index.html
- *
- * ВАЖЛИВО:
- * це НЕ app.get('*'), бо в нових версіях Express
- * '*' більше не підтримується
- */
-app.use((req, res) => {
-	res.sendFile(path.join(__dirname, '../index.html'));
+// 5. Головна сторінка
+// GET / — повертає index.html як стартову сторінку
+app.get('/', (req, res) => {
+  res.sendFile(
+    path.join(__dirname, '..', 'src', 'index.html')
+  );
 });
 
-
-/* ЗАПУСК СЕРВЕРА*/
-
+// 6. Запуск сервера
+// Слухаю порт 3000 і виводжу повідомлення в консоль
 app.listen(PORT, () => {
-	console.log(`✅ Server running at http://localhost:${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
