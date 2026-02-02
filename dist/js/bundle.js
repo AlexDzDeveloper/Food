@@ -1117,7 +1117,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 // // export { postData };
 // // export { getResource };
 
-var BASE_URL = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://food-api.onrender.com';
+var BASE_URL = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://food-lai0.onrender.com';
 var postData = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(path, data) {
     var res;

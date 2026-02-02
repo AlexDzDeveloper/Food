@@ -80,7 +80,7 @@
 const BASE_URL =
   window.location.hostname === 'localhost'
     ? 'http://localhost:3000'
-    : 'https://food-api.onrender.com';
+    : 'https://food-lai0.onrender.com';
 
 const postData = async (path, data) => {
   const res = await fetch(`${BASE_URL}${path}`, {
